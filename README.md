@@ -7,7 +7,7 @@
 > https://codepen.io/primarypartition/project/editor/ZOgQbR
 > https://codepen.io/primarypartition/pen/jObXbEO
 
-### JavaScript
+### JavaScript, DOM
 
 > https://codepen.io/primarypartition/pen/rNOoLZG
 
@@ -20,4 +20,3 @@
 
 > pip install django==1.11
 > pip install django
-
