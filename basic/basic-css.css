@@ -1,0 +1,33 @@
+body{
+  background: gray;
+  background: url(http://itsali.com);
+  background-repeat:no-repeat;
+}
+
+h1{
+  color: blue;
+}
+
+h4{
+  color: rgba(13,90,140,0.5)
+}
+
+li{
+  color: rgb(0,200,0);
+}
+
+p{
+  color: #000000;
+}
+
+div{
+  background: blue;
+  border: orange;
+  border-width: thick; /* 10 px */
+  border-style: dotted;
+}
+
+span{
+  background: red;
+  color: black;
+}
