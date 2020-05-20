@@ -11,7 +11,8 @@
 ### JavaScript, DOM
 
 > https://codepen.io/primarypartition/pen/rNOoLZG
-> 
+> https://codepen.io/primarypartition/pen/WNQLpBz
+
 
 ## Configure Bootstrap
 
