@@ -23,6 +23,20 @@
 > https://codepen.io/primarypartition/pen/GRpPEPb
 
 
+## Python 3.6
+
+> sudo add-apt-repository ppa:jonathonf/python-3.6
+
+> sudo apt-get update
+
+> sudo apt-get upgrade
+
+> sudo apt-get install python3.6
+
+> python3 --version
+
+
+
 ## Configure Bootstrap
 
 > https://getbootstrap.com/docs/3.3/
