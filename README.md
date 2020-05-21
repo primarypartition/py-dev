@@ -36,7 +36,6 @@
 > python3 --version
 
 
-
 ## Configure Bootstrap
 
 > https://getbootstrap.com/docs/3.3/
