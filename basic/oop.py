@@ -43,12 +43,23 @@ class Dog(Animal):
     def __init__(self):
         Animal.__init__(self)
         print "Dog created"
+        self.legs = 4
+        self.tails = 1
 
     def whoAmI(self):
         print "Dog"
 
     def bark(self):
         print "Woof!"
+    
+    def __str__(self):
+        return "legs:%s , tails:%s " %(self.legs, self.tails)
+
+    def __len__(self):
+        return self.legs
+
+    def __del__(self):
+        print "A Dog is deleted"
 
 d = Dog()
 d.whoAmI()
