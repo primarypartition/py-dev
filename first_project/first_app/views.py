@@ -8,6 +8,5 @@ def index(request):
 def home(request):
     return HttpResponse("Hello World!")
     
-def about(request):
-    my_dict = {'insert_me': "Hello I am from views.py!"}
-    return render(request, 'first_app/about.html', context=my_dict)
+def about(request):    
+    return render(request, 'first_app/about.html')
