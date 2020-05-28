@@ -80,7 +80,7 @@ conda activate mydjenv
 > django-admin startproject first_project
 
 
-### projct server
+### Projct server
 
 > python manage.py runserver
 
@@ -114,4 +114,80 @@ INSTALLED_APPS = [
     'first_app'
 ]
 ```
+
+
+## Faker Lib
+
+```
+pip install Faker
+```
+
+
+## DB migration
+
+```
+> python manage.py migrate
+
+> python manage.py makemigrations first_app
+
+> python manage.py migrate
+
+> python manage.py migrate first_app
+```
+
+
+## Django Commands
+
+```
+conda env list
+conda info --envs
+
+conda deactivate
+conda activate base
+
+conda create --name mydjenv django
+conda activate mydjenv
+
+> django-admin startproject first_project
+
+> python manage.py runserver
+
+> python manage.py runserver 192.168.33.100:8000
+
+> python manage.py startapp home_app
+
+> python manage.py migrate
+
+> python manage.py makemigrations first_app
+
+> python manage.py migrate
+
+> python manage.py createsuperuser
+
+> python manage.py shell
+```
+
+
+## Django DB
+
+```
+from first_app.models import Topic
+
+Topic(top_name="Lorem")
+Topic(top_name="Mauris")
+Topic(top_name="Integer")
+Topic(top_name="Aenean")
+
+t = Topic(top_name="Lorem")
+t.save()
+t = Topic(top_name="Mauris")
+t.save()
+t = Topic(top_name="Integer")
+t.save()
+t = Topic(top_name="Aenean")
+t.save()
+
+Topic.objects.all()
+```
+
 
