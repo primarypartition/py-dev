@@ -191,3 +191,9 @@ Topic.objects.all()
 ```
 
 
+## Freeze project
+
+```
+pip freeze > requirements.txt
+```
+

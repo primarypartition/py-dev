@@ -19,7 +19,9 @@ from django.urls import path, include
 from home_app import views
 
 urlpatterns = [      
+    path('form_app/', include('form_app.urls')),
     path('user_app/', include('user_app.urls')),
+    
     path('second_app/', include('second_app.urls')),
     path('first_app/', include('first_app.urls')),
     
