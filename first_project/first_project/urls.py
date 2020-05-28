@@ -19,6 +19,7 @@ from django.urls import path, include
 from home_app import views
 
 urlpatterns = [      
+    path('ttag_app/', include('ttag_app.urls')),
     path('form_app/', include('form_app.urls')),
     path('user_app/', include('user_app.urls')),
     

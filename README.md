@@ -25,6 +25,11 @@
 > https://codepen.io/primarypartition/pen/GRpPEPb
 
 
+### Django Basic Project
+
+> first_project
+ 
+
 ## Python 3.6 install
 
 > sudo add-apt-repository ppa:jonathonf/python-3.6
