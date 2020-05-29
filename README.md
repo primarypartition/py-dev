@@ -202,3 +202,77 @@ Topic.objects.all()
 pip freeze > requirements.txt
 ```
 
+
+## Django Deployment
+
+> https://help.pythonanywhere.com/pages/DeployExistingDjangoProject/
+
+> https://www.digitalocean.com/community/tutorials/how-to-deploy-a-local-django-app-to-a-vps
+
+> https://devcenter.heroku.com/articles/deploying-python
+
+> https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html
+
+
+### Heroku
+
+> https://github.com/heroku/django-heroku
+
+> https://devcenter.heroku.com/articles/django-assets
+
+> https://devcenter.heroku.com/articles/deploying-python
+
+```
+pip install django_heroku
+pip install dj-database-url gunicorn whitenoise
+```
+
+
+> In settings.py
+
+```
+ALLOWED_HOSTS = ['192.168.33.100', 'py-dev-first-project.herokuapp.com']
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+at the very bottom:
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
+```
+
+
+> In Procfile
+
+```
+web: gunicorn first_project.wsgi --log-file -
+```
+
+
+> Project deployment
+
+```
+pip freeze > requirements.txt
+
+heroku login -i
+heroku create app_name
+
+git init 
+git remote add heroku git@heroku
+git add .
+git commit -m "project"
+git push heroku master
+
+heroku ps:scale web=1
+
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
+heroku run python seed.py
+heroku run python seed_user.py
+
+heroku config:set     DISABLE_COLLECTSTATIC=1 
+```
