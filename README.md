@@ -27,7 +27,7 @@
 
 ### Django Basic Project
 
-> first_project
+> https://py-dev-first-project.herokuapp.com/
  
 
 ## Python 3.6 install
@@ -216,6 +216,7 @@ pip freeze > requirements.txt
 
 ### Heroku
 
+
 > https://github.com/heroku/django-heroku
 
 > https://devcenter.heroku.com/articles/django-assets
@@ -276,3 +277,57 @@ heroku run python seed_user.py
 
 heroku config:set     DISABLE_COLLECTSTATIC=1 
 ```
+
+
+## Encryption
+
+
+```
+pip install bcrypt
+
+pip install django[bcrypt]
+
+pip install django[argon2]
+```
+
+### In settings.py
+
+
+> https://docs.djangoproject.com/en/3.0/topics/auth/passwords/
+
+```
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+]
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS':{'min_length':9}
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+```
+
+
+## Image upload
+
+```
+pip install pillow 
+Optional: pip install pillow --global-option="build_ext" --global-option="--disable-jpeg"
+```
+
+
+
+
