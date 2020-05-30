@@ -296,7 +296,6 @@ pip install django[argon2]
 
 ### In settings.py
 
-
 > https://docs.djangoproject.com/en/3.0/topics/auth/passwords/
 
 ```
@@ -331,4 +330,53 @@ AUTH_PASSWORD_VALIDATORS = [
 pip install pillow 
 Optional: pip install pillow --global-option="build_ext" --global-option="--disable-jpeg"
 ```
+
+
+## Django Debug
+
+> https://github.com/jazzband/django-debug-toolbar
+
+```
+pip install django-debug-toolbar
+```
+
+
+> https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+
+> settings.py
+
+```
+INTERNAL_IPS = [
+    # ...
+    '192.168.33.100',
+    # ...
+]
+
+INSTALLED_APPS = [
+    # ...
+    'django.contrib.staticfiles',
+    # ...
+    'debug_toolbar',
+]
+
+MIDDLEWARE = [
+    # ...
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # ...
+]
+
+```
+
+> urls.py
+
+```
+from django.conf import settings
+from django.urls import include
+
+if settings.DEBUG:
+  import debug_toolbar
+
+  urlpatterns = [path('__debug__', include(debug_toolbar.urls)),] + urlpatterns
+```
+
 
