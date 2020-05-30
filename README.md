@@ -380,3 +380,28 @@ if settings.DEBUG:
 ```
 
 
+## Django admin customization 
+
+> https://github.com/django/django
+
+> https://github.com/django/django/tree/master/django/contrib/admin/templates
+
+```
+in project_root
+
+mkdir templates
+
+in templates
+
+mkdir admin
+
+follow director structure as in github repo
+
+django -> contrib -> admin -> templates -> admin
+
+touch base_site.html
+
+customize it as per requirements
+
+in project settings.py mst register templates directory
+```

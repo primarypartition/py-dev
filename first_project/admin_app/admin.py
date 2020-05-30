@@ -13,5 +13,16 @@ admin.site.register(User)
 
 admin.site.register(UserProfileInfo)
 
-admin.site.register(School)
+
+class SchoolAdmin(admin.ModelAdmin):
+    # Detail view
+    fields = ["name", "location", "principal"]	
+       
+    # List view
+    search_fields = ["name", "location"]
+    list_filter = ["location"]
+    list_display = ["name", "principal", "location"]
+    list_editable = ["principal"]
+    
+admin.site.register(School, SchoolAdmin)
 admin.site.register(Student)
