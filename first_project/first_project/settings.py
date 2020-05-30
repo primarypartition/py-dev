@@ -25,6 +25,12 @@ SECRET_KEY = '3c7#6*gyk8z8r6n(8#tfkj(nw3(@sy1-_!*^82f)xiw=udw4m6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+INTERNAL_IPS = [
+    # ...
+    '192.168.33.100',
+    # ...
+]
+
 ALLOWED_HOSTS = ['192.168.33.100', 'py-dev-first-project.herokuapp.com']
 
 
@@ -37,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    "debug_toolbar",
     
     'home_app',
     'admin_app',
@@ -60,6 +68,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'first_project.urls'
