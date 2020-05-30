@@ -18,7 +18,8 @@ from django.urls import path, include
 
 from home_app import views
 
-urlpatterns = [     
+urlpatterns = [   
+    path('cbv_app/', include('cbv_app.urls')),
     path('user_auth_app/', include('user_auth_app.urls')),
     
     path('ttag_app/', include('ttag_app.urls')),

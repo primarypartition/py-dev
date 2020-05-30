@@ -278,7 +278,7 @@ heroku run python manage.py createsuperuser
 heroku run python seed.py
 heroku run python seed_user.py
 
-heroku config:set     DISABLE_COLLECTSTATIC=1 
+heroku config:set DISABLE_COLLECTSTATIC=1 
 ```
 
 
@@ -292,6 +292,7 @@ pip install django[bcrypt]
 
 pip install django[argon2]
 ```
+
 
 ### In settings.py
 
@@ -330,7 +331,4 @@ AUTH_PASSWORD_VALIDATORS = [
 pip install pillow 
 Optional: pip install pillow --global-option="build_ext" --global-option="--disable-jpeg"
 ```
-
-
-
 

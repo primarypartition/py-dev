@@ -1,0 +1,17 @@
+{% extends "cbv_app/layout.html" %}
+
+{% block title_block %}
+  Schools
+{% endblock %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Welcome to the List of Schools Page!</h1>
+    
+    <ol>
+      {% for school in schools %}
+        <h2><li><a href="{{ school.get_absolute_url }}"> {{school.name}} </a></li></h2>
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}

@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'form_app',
     'ttag_app',
     
-    'user_auth_app'
+    'user_auth_app',
+    'cbv_app'
 ]
 
 MIDDLEWARE = [
