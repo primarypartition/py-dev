@@ -29,6 +29,11 @@
 
 > https://py-dev-first-project.herokuapp.com/
  
+ 
+### Django Blog
+
+> https://py-dev-blog.herokuapp.com/
+ 
 
 ## Python 3.6 install
 
