@@ -33,7 +33,12 @@
 ### Django Blog
 
 > https://py-dev-blog.herokuapp.com/
+
  
+### Django Social
+
+> https://py-dev-social.herokuapp.com
+
 
 ## Python 3.6 install
 
@@ -387,9 +392,11 @@ if settings.DEBUG:
 
 ## Django admin customization 
 
+
 > https://github.com/django/django
 
 > https://github.com/django/django/tree/master/django/contrib/admin/templates
+
 
 ```
 in project_root
