@@ -153,8 +153,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # login:
 
 # LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = 'keeper'
-LOGOUT_REDIRECT_URL = 'thanks'
+LOGIN_REDIRECT_URL = '/social_app/keeper'
+LOGOUT_REDIRECT_URL = '/social_app/thanks'
 
 
 # Configure Django App for Heroku.
